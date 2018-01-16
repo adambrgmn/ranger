@@ -1,0 +1,26 @@
+{
+  "name": "ranger",
+  "version": "0.0.0",
+  "description": "Takes a string of ranges an returns an array with numbers in that range",
+  "main": "index.js",
+  "author": "Adam Bergman",
+  "license": "MIT",
+  "scripts": {
+    "build": "frans-scripts bundle",
+    "test": "frans-scripts test",
+    "lint": "frans-scripts lint",
+    "format": "frans-scripts format",
+    "precommit": "frans-scripts precommit",
+    "validate": "frans-scripts lint && frans-scripts test --coverage && frans-scripts bundle",
+    "release": "frans-scripts release"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "frans-scripts": "^2.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
