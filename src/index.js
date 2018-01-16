@@ -10,12 +10,12 @@ const ranger = str => {
   
   return separateInputs.reduce((acc, input) => {
     const val = toNumber(input);
-    if (!Number.isNaN(val)) return [...acc, val];
+    if (!Number.isNaN(val)) return acc.concat(val);
     
-    const [from, to] = map(toNumber, splitDash(input));
-    const r = range(from, to);
+    const fromTo = map(toNumber, splitDash(input));
+    const r = range(fromTo[0], fromTo[1]);
 
-    return [...acc, ...r];
+    return acc.concat(r);
   }, []);
 };
 
