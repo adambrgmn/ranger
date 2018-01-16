@@ -1,10 +1,17 @@
 {
   "name": "ranger",
-  "version": "0.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Takes a string of ranges an returns an array with numbers in that range",
-  "main": "index.js",
-  "author": "Adam Bergman",
+  "main": "dist/ranger.cjs.js",
+  "jsnext:main": "dist/ranger.esm.js",
+  "module": "dist/ranger.esm.js",
+  "files": ["dist"],
+  "author": "Adam Bergman <adam@fransvilhelm.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adambrgmn/ranger.git"
+  },
   "scripts": {
     "build": "frans-scripts bundle",
     "test": "frans-scripts test",
